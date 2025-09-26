@@ -13,7 +13,7 @@ services:
       - springboot-mysql-net
 
   backend:
-    image: somesh150805/docker-backend:latest
+    image: somesh150805/crowd-backend:latest
     container_name: crowdbackend
     ports:
       - "6005:6000"
@@ -24,7 +24,7 @@ services:
       - springboot-mysql-net
 
   frontend:
-    image: somesh150805/docker-frontend:latest
+    image: somesh150805/crowd-frontend:latest
     container_name: crowdfrontend
     ports:
       - "6010:80"
