@@ -6,7 +6,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: crowdfundingdb
     ports:
-      - "3309:3306"
+      - "3305:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
@@ -16,7 +16,7 @@ services:
     image: somesh150805/crowd-backend:latest
     container_name: crowdbackend
     ports:
-      - "6005:6000"
+      - "1998:1999"
     depends_on:
       - mysqldb
     restart: on-failure
@@ -27,7 +27,7 @@ services:
     image: somesh150805/crowd-frontend:latest
     container_name: crowdfrontend
     ports:
-      - "6010:80"
+      - "1997:80"
     depends_on:
       - backend
     restart: on-failure
