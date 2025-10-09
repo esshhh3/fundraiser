@@ -13,7 +13,7 @@ services:
       - springboot-mysql-net
 
   backend:
-    image: somesh150805/crowd-backend:latest
+    image: eswarprasad1/crowd-backend:latest
     container_name: crowdbackend
     ports:
       - "1998:1999"
@@ -24,7 +24,7 @@ services:
       - springboot-mysql-net
 
   frontend:
-    image: somesh150805/crowd-frontend:latest
+    image: eswarprasad1/crowd-frontend:latest
     container_name: crowdfrontend
     ports:
       - "1997:80"
