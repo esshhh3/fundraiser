@@ -33,7 +33,7 @@ jobs:
           context: ./FundRaiser
           file: ./FundRaiser/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}esshhh3/k8-crowd-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }} eswarprasad1/k8-crowd-backend:latest
 
       # Step 5 — Build & Push Frontend Image
       - name: Build and Push Frontend Image
@@ -42,4 +42,4 @@ jobs:
           context: ./fundraiserfrontend
           file: ./fundraiserfrontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}esshhh3/k8-crowd-frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }} eswarprasad1/k8-crowd-frontend:latest
