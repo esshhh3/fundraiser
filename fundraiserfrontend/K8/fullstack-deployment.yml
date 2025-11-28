@@ -74,7 +74,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: eswarprasad1/k8-crowd-backend:first  # <-- change this
+          image: eswarprasad1/k8-crowd-backend:latest # <-- change this
           ports:
             - containerPort: 2000
 ---
@@ -113,7 +113,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: eswarprasad1/k8-crowd-frontend:first   # <-- change this
+          image: eswarprasad1/k8-crowd-frontend:latest   # <-- change this
           ports:
             - containerPort: 80
 ---
