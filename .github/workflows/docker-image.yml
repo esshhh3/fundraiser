@@ -1,4 +1,3 @@
- 
 name: CI Build and Push Docker Images 
 
 on:
@@ -26,20 +25,22 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_SECRET }}
 
-      # Step 4 — Build & Push Backend Image
+      # Step 4 — Build & Push Backend Image ✅ FIXED
       - name: Build and Push Backend Image
         uses: docker/build-push-action@v6
         with:
           context: ./FundRaiser
           file: ./FundRaiser/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }} eswarprasad1/k8-crowd-backend:latest
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/k8-crowd-backend:latest
 
-      # Step 5 — Build & Push Frontend Image
+      # Step 5 — Build & Push Frontend Image ✅ FIXED
       - name: Build and Push Frontend Image
         uses: docker/build-push-action@v6
         with:
           context: ./fundraiserfrontend
           file: ./fundraiserfrontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }} eswarprasad1/k8-crowd-frontend:latest
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/k8-crowd-frontend:latest
